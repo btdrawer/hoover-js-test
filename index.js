@@ -39,6 +39,7 @@ directions.forEach((d) => {
     for (var i = 0; i < dirt.length; i++) {
         //Check if current location needs to be cleaned
         if (parseInt(dirt[i][0]) === coordinates[0] && parseInt(dirt[i][1]) === coordinates[1]) {
+            //add to cleaned counter
             cleaned += 1;
 
             //Replace coordinates of dirt with '-1' indicates that spot has now been cleaned
