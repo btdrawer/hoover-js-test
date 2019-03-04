@@ -8,12 +8,14 @@ by a space, representing coordinates.
 The last line should be a string of directions, e.g., 'NNESW', which will
 be broken apart into individual characters.
 */
-const fs = require('fs');
+module.exports = () => {
+    const fs = require('fs');
 
-var text = fs.readFileSync('./input.txt').toString();
-var data = [];
+    var text = fs.readFileSync('./input.txt').toString(),
+    data = [];
 
-text.split('\r\n').map((t) => data.push(t.split(' ')));
-data[data.length-1] = data[data.length-1][0].split('');
+    text.split('\r\n').map((t) => data.push(t.split(' ')));
+    data[data.length-1] = data[data.length-1][0].split('');
 
-module.exports = data;
+    return data;
+}
