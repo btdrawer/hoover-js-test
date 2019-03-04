@@ -16,24 +16,20 @@ const main = () => {
     directions.forEach((d) => {
         switch(d) {
             case 'N':
-                coordinates[1] += 1;
+                coordinates[1] >= dimensions[1] ? coordinates[1] : coordinates[1] += 1;
                 break;
             case 'S':
-                coordinates[1] -= 1;
+                coordinates[1] <= 0 ? coordinates[1] : coordinates[1] -= 1;
                 break;
             case 'E':
-                coordinates[0] += 1;
+                coordinates[0] >= dimensions[0] ? coordinates[0] : coordinates[0] += 1;
                 break;
             case 'W':
-                coordinates[0] -= 1;
+                coordinates[0] <= 0 ? coordinates[0] : coordinates[0] -= 1;
                 break;
             default:
                 break;
         }
-
-        //Check that the hoover has not exceeded the dimensions
-        coordinates[0] >= dimensions[0] ? coordinates[0] = dimensions[0] - 1 : coordinates[0];
-        coordinates[1] >= dimensions[1] ? coordinates[1] = dimensions[1] - 1 : coordinates[1];
 
         //Loop through coordinates of dirty spots
         for (var i = 0; i < dirt.length; i++) {

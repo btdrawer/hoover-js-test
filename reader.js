@@ -1,5 +1,5 @@
 /*
-Reader file.
+Reader function.
 It takes a text file - input.txt, placed in the same directory - and
 converts it to an array.
 
