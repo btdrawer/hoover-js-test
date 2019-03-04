@@ -1,5 +1,5 @@
 /*
-This is the reader file.
+Reader file.
 It takes a text file - input.txt, placed in the same directory - and
 converts it to an array.
 
