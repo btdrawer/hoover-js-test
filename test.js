@@ -20,7 +20,7 @@ results6 = ['0 1\n', '0\n'];
 
 var file = './input.txt';
 
-describe('index.js', () => {
+describe('main.js', () => {
     it('should succeed if there is one patch of dirt', (done) => {
         fs.writeFileSync(file, case1);
         main = require('./main');
