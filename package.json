@@ -4,6 +4,7 @@
         "test": "./node_modules/.bin/mocha test.js"
     },
     "dependencies": {
+        "fs": "0.0.1-security",
         "mocha": "^6.0.2",
         "test-console": "^1.1.0"
     }
